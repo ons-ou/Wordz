@@ -23,6 +23,7 @@ class Words extends React.Component {
                 tryNumber={i}
                 word={this.props.guesses[i]}
                 wordToGuess={this.props.word}
+                useLetter = {(k,v) => this.props.useLetter(k,v)}
             />)
         }
 

@@ -8,9 +8,12 @@ function Word(props) {
     let word = props.word
     let wordToGuess = props.wordToGuess
     for (let i = 0; i < word.length; i++) {
-    if (word[i]===wordToGuess[i])
+    if (word[i]===wordToGuess[i]) {
         color = "green"
+        props.useLetter(word[i], "green")
+    }
     else if (wordToGuess.includes(word[i])){
+        props.useLetter(word[i], "yellow")
         if (wordToGuess.split(word[i]).length === 1 )
             color = "yellow"
         else {
@@ -21,16 +24,19 @@ function Word(props) {
                 color = "red"
         }
     }
-    else
+    else {
         color = "red"
-
+        props.useLetter(word[i], "red")
+    }
         letter.push(<Letter
             key={props.tryNumber * 10 + i}
             number = {i}
-            value={props.word[i]}
-            word = {props.wordToGuess}
+            value={word[i]}
+            word = {wordToGuess}
             color = {color}
         />)
+
+
     }
     return (<div className={"word"}>
         {letter}

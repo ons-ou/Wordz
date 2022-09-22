@@ -65,12 +65,19 @@ button{
     font-size: 15px;
     box-shadow: black;
     margin-top: 20px;
-
 }
 
 .col-2 {
     flex: 2;
     margin: 15px;
     align-self: flex-end;
+}
+
+.alphabet {
+    display: inline-block;
+    color: black;
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
 }
 

@@ -40,7 +40,8 @@ class GamePlay extends React.Component {
                 <Words guesses={this.props.guesses}
                        word={this.props.word}
                        onGuessChange={(word) => this.onGuessChange(word)}
-                       gameOver ={this.props.gameOver}/>
+                       gameOver ={this.props.gameOver}
+                        useLetter = {(k,v) => this.props.useLetter(k,v)}/>
                 <button onClick={() => this.handleSubmit()} disabled={this.state.buttonDisabled || this.props.gameOver === true}>Submit</button>
             </div>)
     }
