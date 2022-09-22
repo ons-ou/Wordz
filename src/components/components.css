@@ -1,0 +1,76 @@
+.letter {
+  box-sizing: content-box;
+  color: white;
+  width: 1ch;
+  font-size: 25px;
+  margin-left: 15px;
+  height: 50px;
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  margin-right: 1ch;
+  letter-spacing: 0.6em;
+
+}
+
+.word-input {
+  box-sizing: content-box;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  margin-left: 15px;
+  height: 50px;
+  text-align: left;
+  background: #282c34 repeating-linear-gradient(90deg,
+        white 0,
+        white 2ch,
+        transparent 0,
+        transparent 4ch)
+      0 100%/100% 2px no-repeat;
+  /* show background only for content */
+  background-clip: content-box;
+  /* just add 1px to avoid cursor overflow */
+    padding: 8px 0 0;
+    letter-spacing: 2.8ch;
+}
+
+.number-input {
+    width: 80px;
+    height: 30px;
+    background: white;
+    border-radius: 10px;
+    font-size: 15px;
+    box-shadow: black;
+    margin-top: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.word {
+    width: 100%;
+}
+
+.col-1{
+    width: auto;
+    align-items: center;
+    margin-left: 10px;
+    align-self: flex-end;
+}
+
+button{
+    width: 80px;
+    height: 50px;
+    background: white;
+    border-radius: 12px;
+    font-size: 15px;
+    box-shadow: black;
+    margin-top: 20px;
+
+}
+
+.col-2 {
+    flex: 2;
+    margin: 15px;
+    align-self: flex-end;
+}
+
