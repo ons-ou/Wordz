@@ -16,11 +16,13 @@ class GamePlay extends React.Component {
 
         if (this.current.length !== this.props.word.length)
             this.setState({buttonDisabled : true});
+        else if (this.current === this.props.word){
+            this.setState({buttonDisabled : false});
+        }
         else
         {
             const response = await fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + this.current);
             let json = await response.json();
-            console.log(json)
             this.setState({buttonDisabled: json["title"]==='No Definitions Found'});
         }
     }

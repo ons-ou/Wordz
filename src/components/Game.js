@@ -24,8 +24,9 @@ function Game() {
     React.useEffect(() => {
         const fetchWord = async () => {
             setLoading(true)
-            let randomWord = require('random-word-by-length');
-            setWord(randomWord(wordLength));
+            const response = await fetch("https://random-word-api.herokuapp.com/word?length="+ wordLength);
+            let json = await response.json();
+            setWord(json[0])
             setLoading(false)
         }
         fetchWord()

@@ -7,7 +7,8 @@ function GameSettings(props){
             if (event.target.name === "length")
                 props.changeWordLength(event.target.value)
             else
-                (event.target.value? props.changeTryNumber(parseInt(event.target.value)): props.changeTryNumber(null))
+                (event.target.value? props.changeTryNumber(parseInt(event.target.value)
+                ): props.changeTryNumber(null))
         }
     };
 
